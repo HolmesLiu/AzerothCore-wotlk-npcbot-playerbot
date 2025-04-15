@@ -8,65 +8,51 @@
 [![nopch-build](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/core-build-nopch.yml/badge.svg?branch=npcbots_3.3.5)](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/core-build-nopch.yml)
 [![windows-build](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/windows_build.yml/badge.svg)](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/windows_build.yml)
 
-## Introduction
+## 介绍
 
-AzerothCore is an open-source game server application and framework designed for hosting massively multiplayer online role-playing games (MMORPGs). It is based on the popular MMORPG World of Warcraft (WoW) and seeks to recreate the gameplay experience of the original game from patch 3.3.5a.
+AzerothCore 是一个开源游戏服务器应用程序和框架，旨在托管大型多人在线角色扮演游戏（MMORPG）。它基于流行的 MMORPG《魔兽世界》（WoW），并旨在重现原始游戏 3.3.5a 补丁版本的游戏体验。
 
-The original code is based on MaNGOS, TrinityCore, and SunwellCore and has since then had extensive development to improve stability, in-game mechanics, and modularity to the game. AC has also grown into a community-driven project with a significant number of contributors and developers. It is written in C++ and provides a solid foundation for creating private servers that mimic the mechanics and behavior of the official WoW servers.
+原始代码基于 MaNGOS、TrinityCore 和 SunwellCore，经过广泛开发，改进了稳定性、游戏机制和模块化，使游戏更加完善。AzerothCore 也发展成了一个由社区驱动的项目，拥有大量贡献者和开发人员。它使用 C++ 编写，为创建模拟官方 WoW 服务器的私人服务器提供了坚实的基础。
 
-[NPCBots](https://github.com/trickerer/Trinity-Bots) is AzerothCore mod.
-
-
-## Installation
-
-Installation instructions are available [here](http://www.azerothcore.org/wiki/Installation).
-
-NPCBots installation guide is available in the [NPCBots Readme](https://github.com/trickerer/Trinity-Bots#npcbot-mod-installation).
+[NPCBots](https://github.com/trickerer/Trinity-Bots) 是 AzerothCore 的一个模块。
+[PlayerBots](https://github.com/liyunfan1223/mod-playerbots/) 是 AzerothCore 的一个模块。
+基于一些玩家对不同机器人的需求不同，我将两个模块做了合并整合，可以实现双机器人共存。
 
 
-## Support
+## 安装
 
-AzerothCore self-made wiki probably has a lot of answers for you.
+安装说明可以在 [这里](http://www.azerothcore.org/wiki/Installation) 获取。
 
-For help requests, it is recommended to ask your question on [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore) and link it in [our chat](https://discordapp.com/channels/217589275766685707/284406375495368704).
+NPCBots 使用指南可以在 [NPCBots Readme](https://github.com/trickerer/Trinity-Bots#npcbot-mod-installation) 中找到。
+PlayerBots 使用指南可以在 [PlayerBots Readme](https://github.com/liyunfan1223/mod-playerbots/blob/master/README_CN.md) 中找到。
 
+## 支持
 
-## Reporting issues
+AzerothCore 自制的 wiki 可能有很多问题的答案。
 
-NPCBots issues can be reported via the [Github issue tracker](https://github.com/trickerer/Trinity-Bots/issues/).
-
-Please take the time to review existing issues before submitting your own to
-prevent duplicates.
-
-
-## Submitting fixes
-
-C++ fixes are submitted as [pull requests](https://github.com/trickerer/Azerothcore-wotlk-with-NPCBots/pulls).
+对于求助请求，建议将问题发布到 [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore) 。
 
 
-You can check the [authors](https://github.com/azerothcore/azerothcore-wotlk/blob/master/AUTHORS) file for more details.
+## 报告问题
+
+NPCBots 的问题可以通过[Github 问题跟踪器](https://github.com/HolmesLiu/AzerothCore-wotlk-npcbot-playerbot/issues/) 报告。 
+
+请花时间查看现有问题，防止提交重复的问题。
+
+
+## 提交修复
+
+C++ 修复可以通过 [拉取请求](https://github.com/HolmesLiu/AzerothCore-wotlk-npcbot-playerbot/pulls) 提交。
+
 
 ## Important Links
 
 - [NPCBots Readme](https://github.com/trickerer/Trinity-Bots/)
+- [PlayerBots Readme](https://github.com/liyunfan1223/mod-playerbots/)
 
-- [Website](http://www.azerothcore.org/)
-- [AzerothCore catalogue](http://www.azerothcore.org/catalogue.html  "Modules, tools, and other stuff for AzerothCore") (modules, tools, etc...)
-- [Our Discord server](https://discord.gg/gkt4y2x)
-- [Our wiki](http://www.azerothcore.org/wiki "Easy to use and developed by AzerothCore founder")
-- [Our forum](https://github.com/azerothcore/azerothcore-wotlk/discussions/)
-- [Our Facebook page](https://www.facebook.com/AzerothCore/)
-- [Our LinkedIn page](https://www.linkedin.com/company/azerothcore/)
+## 许可证
 
-## License
+- 新版 AzerothCore 源代码组件发布在 [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.en.html) 下。
+- 旧版基于 MaNGOS/TrinityCore 的源代码发布在[GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) 下。
 
-- The new AzerothCore source components are released under the [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.en.html)
-- The old sources based on MaNGOS/TrinityCore are released under the [GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-
-It's important to note that AzerothCore is not an official Blizzard Entertainment product, and it is not affiliated with or endorsed by World of Warcraft or Blizzard Entertainment. AzerothCore does not in any case sponsor nor support illegal public servers. If you use this project to run an illegal public server and not for testing and learning it is your own personal choice.
-
-## Special thanks
-
-It's important to note that AzerothCore is not an official Blizzard Entertainment product, and it is not affiliated with or endorsed by World of Warcraft or Blizzard Entertainment. AzerothCore does not in any case sponsor nor support illegal public servers. If you use this project to run an illegal public server and not for testing and learning it is your own personal choice.
-
-[![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSourceSupport)
+重要的是要注意，AzerothCore 不是 Blizzard Entertainment 的官方产品，也与《魔兽世界》或 Blizzard Entertainment 无关。AzerothCore 绝不赞助或支持非法的公共服务器。如果你使用这个项目来运行非法的公共服务器而不是为了测试和学习，那是你个人的选择。
