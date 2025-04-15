@@ -439,8 +439,8 @@ public:
     void EventBotCapturedFlag(Creature* bot, uint32 bgObjectType);
     void EventBotTeamCapturedPoint(Creature const* bot, TeamId teamId, uint32 point);
     void EventBotTeamLostPoint(Creature const* bot, uint32 point);
-    int8 GetPlayersCountNearPoint(uint8 point, TeamId teamId) const { return _capturePointInfo[point]._playersCount[teamId]; }
-    TeamId GetPointOwner(uint8 point) const { return _capturePointInfo[point]._ownerTeamId; }
+    int8 GetPlayersCountNearPoint(uint8 point, TeamId teamId) const { return _capturePointInfo2[point]._playersCount[teamId]; }
+    TeamId GetPointOwner(uint8 point) const { return _capturePointInfo2[point]._ownerTeamId; }
     //end npcbot
 
     /* Battleground Events */
@@ -451,7 +451,7 @@ public:
     bool AllNodesConrolledByTeam(TeamId teamId) const override;
     TeamId GetPrematureWinner() override;
 
-    [[nodiscard]] CaptureEYPointInfo const& GetCapturePointInfo(uint32 node) const { return _capturePointInfo[node]; }
+    [[nodiscard]] CaptureEYPointInfo const& GetCapturePointInfo(uint32 node) const { return _capturePointInfo2[node]; }
 
 private:
     void PostUpdateImpl(uint32 diff) override;
@@ -491,9 +491,9 @@ private:
         bool IsUncontrolled() const { return _ownerTeamId == TEAM_NEUTRAL; }
     };
 
-    CapturePointInfo _capturePointInfo[EY_POINTS_MAX];
+    CapturePointInfo _capturePointInfo1[EY_POINTS_MAX];
 
-    CaptureEYPointInfo _capturePointInfo[EY_POINTS_MAX];
+    CaptureEYPointInfo _capturePointInfo2[EY_POINTS_MAX];
 
     EventMap _bgEvents;
     uint32 _honorTics;
