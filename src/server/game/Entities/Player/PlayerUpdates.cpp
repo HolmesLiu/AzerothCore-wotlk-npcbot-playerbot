@@ -429,9 +429,13 @@ void Player::Update(uint32 p_time)
         RemoveFromNotify(NOTIFY_VISIBILITY_CHANGED);
     }
 
+
     //NpcBot mod: Update
     _botMgr->Update(p_time);
     //end Npcbot
+
+    sScriptMgr->OnPlayerAfterUpdate(this, p_time);
+
 }
 
 void Player::UpdateMirrorTimers()

@@ -4,10 +4,9 @@ on:
     branches:
       - 'npcbots_3.3.5'
       - 'CI'
+      - 'Playerbot'  # 添加了 "Playerbot" 分支
   pull_request:
-    types:
-      - labeled
-      - synchronize
+    branches: [ "Playerbot" ]
 
 concurrency:
   group: ${{ github.head_ref }} || concat(${{ github.ref }}, ${{ github.workflow }})
@@ -23,7 +22,7 @@ jobs:
     name: ${{ matrix.os }}
     env:
       BOOST_ROOT: C:\local\boost_1_82_0
-    if: github.repository == 'trickerer/AzerothCore-wotlk-with-NPCBots' && !github.event.pull_request.draft
+    if: github.repository == 'trickerer/AzerothCore-wotlk-with-NPCBots' && !github.event.pull_request.draft || github.repository == 'liyunfan1223/azerothcore-wotlk' && !github.event.pull_request.draft  # 保留两个仓库的条件
     steps:
       - uses: actions/checkout@v4
       - name: ccache
